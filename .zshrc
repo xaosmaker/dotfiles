@@ -12,6 +12,7 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/xaos/.oh-my-zsh"
+export PATH=$PATH:/home/xaos/go/bin
 export QT_QPA_PLATFORM=xcb
 
 function ccc() {
