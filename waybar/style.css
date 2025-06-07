@@ -1,0 +1,279 @@
+
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family:
+    Material Design Icons,
+    JetBrainsMono Nerd Font,
+    Iosevka Nerd Font;
+  font-size: 15px;
+    padding: 0 5px 0 5px;
+}
+
+window#waybar {
+  /* background-color: rgba(0, 0, 0, 0); */
+  background-color: black;
+  color: #ffffff;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.1;
+}
+
+
+#workspaces button {
+  /* color: #80e6fe; */
+  box-shadow: inset 0 -3px transparent;
+
+  padding-right: 1px;
+  padding-left: 1px;
+
+  margin-left: 0.1em;
+  margin-right: 0em;
+}
+
+#workspaces button.active {
+  /* color: #bf00ff; */
+  padding-left: 1px;
+  padding-right: 1px;
+  margin-left: 0em;
+  margin-right: 0em;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+#custom-launcher {
+  margin-left: 12px;
+
+  padding-right: 20px;
+  padding-left: 14px;
+
+  font-size: 22px;
+
+  /* color: #80e6fe; */
+
+  margin-top: 8.5px;
+  margin-bottom: 8.5px;
+}
+
+        #power-profiles-daemon{
+  padding-right: 10px;
+}
+
+#custom-updates,
+#custom-media,
+#tray,
+#mode,
+#custom-lock,
+#clock,
+#workspaces,
+#custom-weather,
+#custom-launcher,
+#custom-powermenu
+#idle_inhibitor {
+  /* color: #80e6fe; */
+  border-radius: 6px;
+  padding: 2px 10px;
+  background-color: black;
+  /* background-color: rgba(16, 43, 55, 170); */
+  border-radius: 8px;
+  font-size: 18.5px;
+
+  margin-left: 4px;
+  margin-right: 4px;
+
+  margin-top: 8.5px;
+  margin-bottom: 8.5px;
+}
+
+#memory,
+#custom-CpuTemp,
+#disk,
+#cpu {
+  /* background-color: rgba(16, 43, 55, 170); */
+  background-color: black;
+  padding: 0em 2em;
+  /* color: #80e6fe; */
+  font-size: 20px;
+
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+
+  padding-top: 3px;
+  padding-bottom: 3px;
+
+  margin-top: 7px;
+  margin-bottom: 7px;
+
+  font-size: 20px;
+}
+
+#disk {
+  font-size: 16px;
+  /* color: #80e6fe; */
+}
+
+#cpu {
+  padding-left: 0.2em;
+  border-radius: 8px 0px 0px 8px;
+  padding-left: 12px;
+  padding-right: 10px;
+  font-size: 16px;
+  /* color: #80e6fe; */
+}
+
+#memory {
+  /* color: #80e6fe; */
+  border-radius: 0px 8px 8px 0px;
+  font-size: 16px;
+  padding-right: 8px;
+}
+
+#custom-CpuTemp {
+  /* color: #80e6fe; */
+  font-size: 16px;
+}
+
+
+
+#tray {
+  margin-right: 8px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  font-size: 25px;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  /* background-color: #eb4d4b; */
+  background-color: black;
+}
+
+#backlight,
+#battery,
+#custom-notification,
+#pulseaudio,
+#pulseaudio#microphone,
+#bluetooth,
+#network {
+  /* background-color: rgba(16, 43, 55, 170); */
+  background-color: black;
+  padding: 0em 2em;
+
+  font-size: 20px;
+
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+
+  padding-top: 3px;
+  padding-bottom: 3px;
+
+  margin-top: 7px;
+  margin-bottom: 7px;
+
+  font-size: 20px;
+}
+
+#pulseaudio.microphone {
+  /* color: #80e6fe; */
+  padding-left: 8px;
+  padding-right: 3px;
+  font-size: 15px;
+}
+
+#pulseaudio {
+  /* color: #80e6fe; */
+  padding-left: 3px;
+  font-size: 16px;
+}
+
+#pulseaudio.muted {
+  /* color: #fd0000; */
+  padding-left: 3px;
+  font-size: 22px;
+}
+
+#network {
+  padding-left: 0.2em;
+  /* color: #80e6fe; */
+  border-radius: 8px 0px 0px 8px;
+  padding-left: 10px;
+  padding-right: 12px;
+  font-size: 20px;
+}
+
+#network.disconnected {
+  font-size: 18px;
+  color: #80e6fe;
+}
+
+#battery {
+  color: #80e6fe;
+  border-radius: 0px 8px 8px 0px;
+  font-size: 18px;
+  padding-right: 8px;
+}
+
+#battery.critical,
+#battery.warning,
+#battery.full,
+#battery.plugged {
+  /* color: #80e6fe; */
+  padding-left: 6px;
+  padding-right: 8px;
+  font-size: 18px;
+}
+
+#battery.charging {
+  font-size: 18px;
+  padding-right: 8px;
+  padding-left: 4px;
+}
+
+#battery.full,
+#battery.plugged {
+  font-size: 18px;
+  padding-right: 8px;
+}
+
+@keyframes blink {
+  to {
+    /* background-color: rgba(30, 34, 42, 0.5); */
+    background-color: black;
+    /* color: #abb2bf; */
+  }
+}
+
+#battery.warning {
+  /* color: #80e6fe; */
+}
+
+#battery.critical:not(.charging) {
+  /* color: #80e6fe; */
+}
+
+
+#clock {
+  font-size: 18px;
+  font-weight: 800;
+  /* color: #80e6fe; */
+  margin-right: 12px;
+  border-radius: 8px;
+  padding: 0 6px 0 6.8px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
