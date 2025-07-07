@@ -1,6 +1,6 @@
 sudo systemclt enable sddm
-systemctl --user enable --now ssh-agent                                                                                                                            ─╯
-systemctl --user enable --now waybar                                                                                                                           ─╯
+systemctl --user enable --now ssh-agent
+systemctl --user enable --now waybar
 
 for drv in qemu interface network nodedev nwfilter secret storage; do
     sudo systemctl enable virt${drv}d.service;
@@ -13,3 +13,7 @@ sudo systemctl enable --now tuned.service
 sudo virsh net-autostart default 
 sudo virsh net-start default 
 sudo systemctl enable --now docker
+
+sudo usermod -aG docker,libvirt,libvirt-qemu,xaos,wheel xaos                                                                                                       ─╯
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
