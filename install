@@ -62,5 +62,6 @@ lua51
 vlc
 polkit-gnome
 neovim
-nemo
 nvm
+nautilus
+xdg-desktop-portal-gnome
