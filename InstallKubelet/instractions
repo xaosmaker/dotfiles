@@ -1,0 +1,51 @@
+sudo pacman -Syu
+sudo pacman -S containerd
+
+sudo systemctl enable --now containerd
+sudo systemctl status containerd
+sudo mkdir -p /etc/containerd/
+sudo containerd config default | sudo tee /etc/containerd/config.toml
+sudo cp ~/.config/InstallKubelet/containerd_config.toml /etc/containerd/config.toml
+sudo systemctl restart containerd.service
+sudo sysctl net.ipv4.ip_forward
+ sudo modprobe br_netfilter
+ sudo mv /etc/systemd/zram-generator.conf /etc/systemd/zram-generator.conf.old
+
+
+sudo pacman -S kubeadm kubelet kubectl
+sudo systemctl enable --now kubelet
+sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+
+
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+kubectl apply -f https://raw.githubusercontent.com/flannel-io/flannel/master/Documentation/kube-flannel.yml
+kubectl taint nodes --all node-role.kubernetes.io/control-plane-
+
+sudo pacman -S vi
+kubectl -n kube-system edit configmap coredns
+
+"edit forward . 8.8.8.8 1.1.1.1"
+kubectl -n kube-system rollout status deployment/coredns
+
+
+kubectl get pods -A
+
+
+{skaffold dev}
+docker run -d -p 5000:5000 --name local-registry registry:2
+
+
+{ingress nginx}
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.13.2/deploy/static/provider/cloud/deploy.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.13.2/deploy/static/provider/baremetal/deploy.yaml
+
+
+kubectl -n ingress-nginx edit svc ingress-nginx-controller
+"change node ports to what you want 30080 30443 i prefer"
+kubectl get svc -n ingress-nginx
+
+
+

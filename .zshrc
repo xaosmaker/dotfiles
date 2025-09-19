@@ -14,6 +14,7 @@ source /usr/share/nvm/init-nvm.sh
 export ZSH="/home/xaos/.oh-my-zsh"
 export PATH=$PATH:/home/xaos/go/bin
 export QT_QPA_PLATFORM=xcb
+export REGISTRY="localhost:5000"
 
 function ccc() {
   local full_name=$1
