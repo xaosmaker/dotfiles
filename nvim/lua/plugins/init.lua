@@ -1,7 +1,0 @@
-require("plugins.nvim-tree")
-require("plugins.mason")
-require("plugins.treesitter")
-require("plugins.telescope")
-require("plugins.colorshceme")
-require("plugins.autopairs")
-require("plugins.lazydev")
