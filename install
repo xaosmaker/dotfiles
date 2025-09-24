@@ -65,3 +65,7 @@ neovim
 nvm
 nautilus
 xdg-desktop-portal-gnome
+kubeadm
+kubelet
+kubectl
+skaffold
