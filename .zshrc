@@ -15,6 +15,7 @@ export ZSH="/home/xaos/.oh-my-zsh"
 export PATH=$PATH:/home/xaos/go/bin
 export QT_QPA_PLATFORM=xcb
 export REGISTRY="localhost:5000"
+export EDITOR="nvim"
 
 function ccc() {
   local full_name=$1
