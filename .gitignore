@@ -1,4 +1,7 @@
 user-dirs.dirs
+.mozilla/
+libreoffice/
+gtk-4.0/
 create-next-app-nodejs/
 configstore/
 nextjs-nodejs
