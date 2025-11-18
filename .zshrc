@@ -157,6 +157,7 @@ alias secret_key='python -c "import secrets; print(secrets.token_urlsafe(38))"'
 alias c_steam="/home/xaos/.config/custom_steam_runner/steam_run.sh"
 alias screen="python /home/$USER/.config/custom_steam_runner/dissable_enable_monitor.py"
 alias k="kubectl"
+alias docker_stop="docker stop $(docker ps -a -q)"
 
 # export DB_HOST="localhost"
 # export DB_NAME="test_foodonline"
