@@ -17,6 +17,14 @@ export QT_QPA_PLATFORM=xcb
 export REGISTRY="localhost:5000"
 export EDITOR="nvim"
 
+
+function count_lines(){
+find "$1" \
+  type d \( -name node_modules -o -path "*/internal/db" -o -name .next \) -prune -o \
+  -type f ! \( -name go.mod -o -name go.sum -o -name schema.sql -o -name pnpm-lock.yaml \) \
+  -exec wc -l {} +
+}
+
 function ccc() {
   local full_name=$1
   local name=${full_name%%.*}
@@ -34,6 +42,10 @@ function c() {
   local name=${full_name%%.*}
   gcc -Wall -g $@ -o $name
   ./$name
+}
+
+function env_load() {
+	export $(grep -v '^#' $1 | xargs)
 }
 
 
@@ -157,7 +169,7 @@ alias secret_key='python -c "import secrets; print(secrets.token_urlsafe(38))"'
 alias c_steam="/home/xaos/.config/custom_steam_runner/steam_run.sh"
 alias screen="python /home/$USER/.config/custom_steam_runner/dissable_enable_monitor.py"
 alias k="kubectl"
-alias docker_stop="docker stop $(docker ps -a -q)"
+alias docker_stop="docker stop $(docker ps -a)"
 
 # export DB_HOST="localhost"
 # export DB_NAME="test_foodonline"
