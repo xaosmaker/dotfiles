@@ -19,11 +19,12 @@ export EDITOR="nvim"
 
 
 function count_lines(){
-find "$1" \
-  type d \( -name node_modules -o -path "*/internal/db" -o -name .next \) -prune -o \
-  -type f ! \( -name go.mod -o -name go.sum -o -name schema.sql -o -name pnpm-lock.yaml \) \
+find . \
+  -type d \( -name node_modules -o -path "./internal/db" -o -name .next -o -path "*/static" -o -path "*/.git" -o -path "*/migrations" \) -prune -o \
+  -type f ! \( -name go.mod -o -name go.sum -o -name schema.sql -o -name pnpm-lock.yaml -o -name components.json -o -name Pipfile -o -name Pipfile.lock \) \
   -exec wc -l {} +
 }
+
 
 function ccc() {
   local full_name=$1
