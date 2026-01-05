@@ -6,6 +6,7 @@ create-next-app-nodejs/
 configstore/
 JetBrains/
 gh/
+eden/
 github-copilot/
 nextjs-nodejs
 neofetch/
