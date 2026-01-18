@@ -1,5 +1,6 @@
 user-dirs.dirs
 .mozilla/
+filelightrc
 libreoffice/
 gtk-4.0/
 create-next-app-nodejs/
