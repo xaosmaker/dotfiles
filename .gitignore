@@ -1,4 +1,6 @@
 user-dirs.dirs
+Cypress/
+google-chrome-for-testing/
 .mozilla/
 filelightrc
 libreoffice/
