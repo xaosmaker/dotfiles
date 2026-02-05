@@ -11,8 +11,8 @@ source /usr/share/nvm/init-nvm.sh
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/xaos/.oh-my-zsh"
-export PATH=$PATH:/home/xaos/go/bin
+export ZSH="/home/xaosmaker/.oh-my-zsh"
+export PATH=$PATH:/home/xaosmaker/go/bin
 export QT_QPA_PLATFORM=xcb
 export REGISTRY="localhost:5000"
 export EDITOR="nvim"
@@ -170,7 +170,7 @@ alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true 
 alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
 alias br0='sudo ip link add name br0 type bridge && sudo ip link set dev enp47s0f3u3c2 master br0 && sudo ip link set dev br0 up '
 alias secret_key='python -c "import secrets; print(secrets.token_urlsafe(38))"'
-alias c_steam="/home/xaos/.config/custom_steam_runner/steam_run.sh"
+alias c_steam="/home/xaosmaker/.config/custom_steam_runner/steam_run.sh"
 alias screen="python /home/$USER/.config/custom_steam_runner/dissable_enable_monitor.py"
 alias k="kubectl"
 
