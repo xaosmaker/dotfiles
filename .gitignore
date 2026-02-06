@@ -1,4 +1,5 @@
 user-dirs.dirs
+.nuxtrc
 Cypress/
 google-chrome-for-testing/
 .mozilla/
