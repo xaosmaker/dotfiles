@@ -24,6 +24,9 @@ find . \
   -type f ! \( -name go.mod -o -name go.sum -o -name schema.sql -o -name pnpm-lock.yaml -o -name components.json -o -name Pipfile -o -name Pipfile.lock \) \
   -exec wc -l {} +
 }
+function screenSharingEnv(){
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+}
 
 function docker_stop(){
 docker stop $(docker ps -a -q)
