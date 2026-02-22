@@ -28,10 +28,6 @@ function screenSharingEnv(){
 dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 }
 
-function ??(){
-w3m "https://duckduckgo.com/?q=$*"
-}
-
 function docker_stop(){
 docker stop $(docker ps -a -q)
 }
