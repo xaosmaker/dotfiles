@@ -1,5 +1,6 @@
 user-dirs.dirs
 mozilla/
+bootdev/
 .nuxtrc
 Cypress/
 google-chrome-for-testing/
