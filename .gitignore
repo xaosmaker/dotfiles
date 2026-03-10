@@ -1,4 +1,5 @@
 user-dirs.dirs
+.wrangler/
 mozilla/
 bootdev/
 .nuxtrc
