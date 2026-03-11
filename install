@@ -1,8 +1,5 @@
 hyprland
-sddm
 ntfs-3g
-terminator
-firefox
 git
 swaybg
 wl-clipboard
@@ -10,7 +7,6 @@ dunst
 tmux
 waybar
 w3m
-uwsm
 network-manager-applet
 pavucontrol
 qt5-wayland
@@ -20,10 +16,6 @@ ttf-meslo-nerd
 nwg-look
 gnome-themes-extra
 gnome-disk-utility
-zsh
-zsh-completions
-wget
-pyenv
 nodejs
 go
 npm
@@ -49,7 +41,6 @@ lua51
 vlc
 polkit-gnome
 neovim
-nvm
 nautilus
 xdg-desktop-portal-gnome
 skaffold
