@@ -4,6 +4,7 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+fastfetch
 
 source /usr/share/git/completion/git-prompt.sh
 source /usr/share/git/completion/git-completion.bash
