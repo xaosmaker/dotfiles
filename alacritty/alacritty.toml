@@ -1,0 +1,28 @@
+general.import = ["./tokyo-night.toml"]
+
+[font]
+size = 14.0
+
+[font.bold]
+family = "Adwaita mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "Adwaita mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "Adwaita mono"
+style = "Italic"
+
+[font.normal]
+family = "Adwaita mono"
+style = "Regular"
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+decorations = "transparent"
+blur = false
+opacity = 0.5
