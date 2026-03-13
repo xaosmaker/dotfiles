@@ -1,0 +1,2 @@
+systemctl --user enable --now ssh-agent.socket
+sudo usermod -aG wheel,docker xaos
