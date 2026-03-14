@@ -6,12 +6,10 @@ wl-clipboard
 dunst
 tmux
 waybar
-w3m
 network-manager-applet
 pavucontrol
 qt5-wayland
 qt6-wayland
-ttf-font-awesome
 ttf-meslo-nerd
 nwg-look
 gnome-themes-extra
@@ -43,5 +41,7 @@ polkit-gnome
 neovim
 nautilus
 xdg-desktop-portal-gnome
-skaffold
 telegram-desktop
+qemu-img
+qemu-system-x86
+qemu-ui-gtk

@@ -23,6 +23,9 @@ alias docker_prune='docker system prune --volumes -a'
 alias cls="clear"
 alias screen="python /home/$USER/.config/custom_steam_runner/dissable_enable_monitor.py"
 alias k="kubectl"
+alias startAiVr="$HOME/.config/startQemuAiVr.sh"
+alias stopAiVr="pkill -f archAi.qcow2"
+ alias aiVr="ssh -p 2222 ai@localhost"
 
 function count_lines(){
 find . \
