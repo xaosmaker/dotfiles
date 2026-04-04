@@ -34,6 +34,13 @@ find . \
   -exec wc -l {} +
 }
 
+function c() {
+  local full_name=$1
+  local name=${full_name%%.*}
+  gcc -Wall -g $@ -o $name
+  ./$name
+}
+
 function docker_stop(){
 docker stop $(docker ps -a -q)
 }
@@ -43,5 +50,10 @@ function env_load() {
 }
 set -o vi
 
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
+
 
 PS1='\[\e[38;5;34m\] \H@\u\[\e[0m\] \[\e[94m\]\w\[\e[0m\]$(__git_ps1 " \[\e[38;5;208m\](%s)\[\e[0m\]") \[\e[35m\]\$$?\[\e[0m\] \n \[\e[38;5;206m\]\$\[\e[0m\] '
+export PATH=$PATH:$HOME/go/bin
