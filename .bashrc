@@ -37,8 +37,8 @@ find . \
 function c() {
   local full_name=$1
   local name=${full_name%%.*}
-  gcc -Wall -g $@ -o $name
-  ./$name
+  gcc -Wall -O0 -g $@ -o $name
+  valgrind ./$name
 }
 
 function docker_stop(){
